@@ -10,10 +10,21 @@ function Book(title,author,pages,read){
 
 let lib = []
 
+const main = document.querySelector(".main")
+
 function addBookToLibrary(title,author,pages,read){
+    const card = document.createElement("div")
+    card.classList.add("card")
     lib.push(new Book(title,author,pages,read))
+    main.appendChild(card)
+    const book = new Book(title,author,pages,read)
+    const titleCard = document.createElement("h2")
+    titleCard.textContent = `${book.title}`;
+    card.appendChild(titleCard)
 
 }
+addBookToLibrary("The Hobbit","J.R.R. Tolkien","295 pages","not read")
+
 const addBookPromptButton = document.querySelector(".addBookPromptButton")
 const closePrompt = document.getElementById("closePrompt")
 const body = document.querySelector("body")
