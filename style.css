@@ -1,8 +1,10 @@
+
 body{
     margin: 0;
     height: 100vh;
     display: flex;
     flex-direction: column;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .header,.footer{
     background-color: rgb(149, 161, 150);
@@ -11,6 +13,8 @@ body{
     text-align: center;
 }
 .header{
+    text-align: start;
+    font-size: 148px;
     padding: 100px;
 }
 .main{
@@ -27,6 +31,8 @@ background-color: rgb(195, 199, 196);
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 20%;
+    height: 30%;
     position: fixed;
     transform: translate(-50%,-50%);
     top: 50%;
@@ -38,6 +44,33 @@ background-color: rgb(195, 199, 196);
 }
 .promptContainer{
     display: flex;
-    flex
+    height: 100%;
+    overflow: hidden;
+    align-content: center;
+}
+input{
+    font-size: 18px;
+    display: flex;
+    padding: 10px;
+}
+form{
+    display: flex;
     flex-direction: column;
+    flex: 1;
+    font-size: 18px;
+    padding: 10px;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+#closePrompt{
+    display: flex;
+    align-self: start;
+    size: 10px;
+}
+.formTitle{
+    text-align: center;
+}
+.readCheck{
+    width: 30px;
+    height: 30px;
 }
