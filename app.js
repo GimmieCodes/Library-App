@@ -8,7 +8,7 @@ function Book(title,author,pages,read){
     }
 }
 
-let lib = []
+let lib = [{title:"awesome book",author:"awesome writer dude",pages:"21",read:"read"}]
 
 const main = document.querySelector(".main")
 
@@ -22,17 +22,39 @@ function addBookToLibrary(title,author,pages,read){
 addBookToLibrary("The Hobbit","J.R.R. Tolkien","295 pages","not read")
 
 function displayBookToLibrary(){
-    const titleCard = document.createElement("h2")
     for(let i = 0; i < lib.length; i++){
-        titleCard.textContent = `${lib[i].title} by ${lib[i].author}, ${lib[i].pages}, ${lib[i].read}`
-        main.appendChild(titleCard)
+        const titleCard = document.createElement("h2")
+        const authorCard = document.createElement("h2")
+        const pagesCard = document.createElement("h2")
+        const readCard = document.createElement("h2")
+        const card = document.createElement("div")
+        const cardReadBtn = document.createElement("button")
+        const cardRemoveBtn = document.createElement("button")
+        titleCard.textContent = `${lib[i].title}`
+        authorCard.textContent = `by ${lib[i].author}`
+        pagesCard.textContent = `${lib[i].pages}`
+        readCard.textContent = `by ${lib[i].read}`
+        cardReadBtn.textContent = "Read"
+        cardRemoveBtn.textContent = "remove"
+        main.appendChild(card)
+        card.classList.add(`card`)
+        card.appendChild(titleCard)
+        card.appendChild(authorCard)
+        card.appendChild(pagesCard)
+        card.appendChild(readCard)
+        card.appendChild(cardReadBtn)
+        card.appendChild(cardRemoveBtn)
 
     }
 }
 displayBookToLibrary()
 const addBookPromptButton = document.querySelector(".addBookPromptButton")
 const closePrompt = document.getElementById("closePrompt")
-const body = document.querySelector("body")
+const body = document.querySelector(".body")
+
+document.querySelector(".submitBtn").addEventListener("click",function(event){
+    event.preventDefault()
+})
 
 addBookPromptButton.addEventListener('click',function(){
     document.getElementById('bookPrompt').style.display='block';
@@ -41,7 +63,7 @@ addBookPromptButton.addEventListener('click',function(){
 closePrompt.addEventListener('click',function(){
     document.getElementById('bookPrompt').style.display='none';
 })
-
+console.log(lib)
 
 //main.appendChild(card)
 //const book = new Book(title,author,pages,read)

@@ -79,3 +79,18 @@ form{
     justify-content: center;
     width: 100%;
 }
+.main{
+    display: flex;
+    gap: 30px;
+    
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(226, 229, 229);
+    height:30%;
+    width: 10%;
+    padding: 30px;
+    border-radius: 4%;
+    text-align: center;
+}
