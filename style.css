@@ -94,3 +94,10 @@ form{
     border-radius: 4%;
     text-align: center;
 }
+.inputError{
+    border-color: red;
+}
+.readBtn, .cardRemoveBtn{
+    font-size: large;
+    padding: 20px;
+}

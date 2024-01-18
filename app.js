@@ -8,7 +8,7 @@ function Book(title,author,pages,read){
     }
 }
 
-let lib = []
+let lib = [{title:"1",author:"2",pages:"3",read:"Read"}]
 
 const main = document.querySelector(".main")
 
@@ -32,7 +32,7 @@ function displayBookToLibrary(){
         authorCard.textContent = `by ${lib[i].author}`
         pagesCard.textContent = `${lib[i].pages} Pages`
         readCard.textContent = `${lib[i].read}`
-        cardRemoveBtn.textContent = "remove"
+        cardRemoveBtn.textContent = "Remove"
         card.dataset.card = [i]
         main.appendChild(card)
         card.classList.add(`card`)
@@ -68,13 +68,35 @@ const cardRemoveBtn = document.querySelector(".cardRemoveBtn")
 
 document.querySelector(".submitBtn").addEventListener("click",function(event){
     event.preventDefault()
-    const title = document.getElementById("bookName").value
-    const author = document.getElementById("bookAuthor").value
-    const pages = document.getElementById("bookPages").value
+    const title = document.getElementById("bookName")
+    const author = document.getElementById("bookAuthor")
+    const pages = document.getElementById("bookPages")
+    if (title.value !== "" && author.value !== "" && pages.value !== ""){
     readCheck()
-    addBookToLibrary(title,author,pages,read)
+    addBookToLibrary(title.value,author.value,pages.value,read)
     document.getElementById('bookPrompt').style.display='none';
+    clearPrompt()
+    title.classList.remove("inputError")
+    author.classList.remove("inputError")
+    pages.classList.remove("inputError")
+    }else{
+        
+        title.classList.add("inputError")
+        author.classList.add("inputError")
+        pages.classList.add("inputError")
+    }
 })
+
+function clearPrompt(){
+    const title = document.getElementById("bookName")
+    const author = document.getElementById("bookAuthor")
+    const pages = document.getElementById("bookPages")
+    const read = document.getElementById("bookReadStatus")
+    title.value = ""
+    author.value = ""
+    pages.value = ""
+    read.checked = false
+}
 
 let read = document.getElementById("bookReadStatus")
 
@@ -95,6 +117,7 @@ addBookPromptButton.addEventListener('click',function(){
 })
 closePrompt.addEventListener('click',function(){
     document.getElementById('bookPrompt').style.display='none';
+    clearPrompt()
 })
 
 displayBookToLibrary()
