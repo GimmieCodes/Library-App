@@ -14,11 +14,11 @@
         <div class="promptContainer">
             <form>
                 <h1 class="formTitle">Add a New Book</h1>
-                <input type="text" placeholder="Title">
-                <input type="text" placeholder="Author">
-                <input type="number" min="0"placeholder="Pages">
-                <label for="read">Has been read?
-                <input class="readCheck" type="checkbox">
+                <input id="bookName" type="text" placeholder="Title" required>
+                <input id="bookAuthor" type="text" placeholder="Author" required>
+                <input id="bookPages" type="number" min="0"placeholder="Pages" required>
+                <label for="read"required>Has been read?
+                <input id="bookReadStatus" type="checkbox">
             </label>
             <input class="submitBtn" type="submit">
             </form>

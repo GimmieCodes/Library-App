@@ -70,7 +70,7 @@ form{
 .formTitle{
     text-align: center;
 }
-.readCheck{
+#bookReadStatus{
     width: 30px;
     height: 30px;
 }
