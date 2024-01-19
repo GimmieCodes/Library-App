@@ -9,6 +9,7 @@ function Book(title,author,pages,read){
 }
 
 let lib = []
+//{title:"1",author:"1",pages:"1",read:"Read"}
 
 const main = document.querySelector(".main")
 
