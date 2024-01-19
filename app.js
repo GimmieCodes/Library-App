@@ -46,8 +46,12 @@ function displayBookToLibrary(){
         card.appendChild(cardRemoveBtn)
         readCard.addEventListener('click',function(){
             if (readCard.textContent == "Read"){
+                readCard.classList.remove('read')
+                readCard.classList.add('notRead')
                 return readCard.textContent = "Not Read"
             }else if(readCard.textContent == "Not Read"){
+                    readCard.classList.remove('notRead')
+                    readCard.classList.add('read')
                     return readCard.textContent = "Read"
                 
             }
@@ -109,6 +113,7 @@ function readCheck(){
          return read = "Read"
          
     }else{
+        
        return read = "Not Read"
     }
 }
