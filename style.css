@@ -119,6 +119,8 @@ form{
     border-style: solid;
     border-radius: 5px;
     padding: 7px 10px 7px 10px;
+    color: black;
+    border-color: rgb(136, 136, 136);
 }
 .formTitle{
     text-align: center;
@@ -134,6 +136,8 @@ form{
     background-color:rgb(221, 221, 221) ;
     border-style: solid;
     border-radius: 5px;
+    color: black;
+    border-color: rgb(136, 136, 136);
 }
 .submitBtn:hover{
     background-color: rgb(187, 212, 182);
