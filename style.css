@@ -82,9 +82,10 @@ body{
     left: 50%;
     padding: 20px;
     background-color: rgb(224, 224, 224);
-    border-style: double;
+    border-style:none;
     border-color: black;
     z-index: 2;
+    border-radius: 5px;
 }
 .promptContainer{
     display: flex;
