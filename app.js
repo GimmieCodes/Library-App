@@ -8,7 +8,7 @@ function Book(title,author,pages,read){
     }
 }
 
-let lib = [{title:"1",author:"2",pages:"3",read:"Read"}]
+let lib = []
 
 const main = document.querySelector(".main")
 
@@ -113,10 +113,12 @@ function readCheck(){
 
 addBookPromptButton.addEventListener('click',function(){
     document.getElementById('bookPrompt').style.display='block';
+    document.getElementById('backgroundPrompt').style.display='block';
 
 })
 closePrompt.addEventListener('click',function(){
     document.getElementById('bookPrompt').style.display='none';
+    document.getElementById('backgroundPrompt').style.display='none';
     clearPrompt()
 })
 

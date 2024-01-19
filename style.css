@@ -15,15 +15,35 @@ body{
 .header{
     text-align: start;
     font-size: 148px;
-    padding: 100px;
+    padding: 50px;
+    border-style:none ;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    max-height: 100px;
+    position: relative;
 }
 .main{
-flex: 1;
-padding: 20px;
-background-color: rgb(195, 199, 196);
+    flex: 1;
+    padding: 20px;
+    background-color: rgb(195, 199, 196);
+    box-shadow: inset;
+    flex-wrap: wrap;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 .addBookPromptButton{
+    background-color: rgb(109, 121, 112);
     padding: 40px;
+    border-radius: 15px;
+    border-style: hidden;
+    width: 80%;
+    transition: 0.3s;
+    font-size: 40px;
+    color: rgb(178, 184, 179);
+}
+.addBookPromptButton:hover{
+    background-color: rgb(221, 221, 221);
 }
 
 #bookPrompt {
@@ -41,6 +61,7 @@ background-color: rgb(195, 199, 196);
     background-color: rgb(224, 224, 224);
     border-style: double;
     border-color: black;
+    z-index: 2;
 }
 .promptContainer{
     display: flex;
@@ -93,6 +114,7 @@ form{
     padding: 30px;
     border-radius: 4%;
     text-align: center;
+    justify-content: space-evenly;
 }
 .inputError{
     border-color: red;
@@ -100,4 +122,17 @@ form{
 .readBtn, .cardRemoveBtn{
     font-size: large;
     padding: 20px;
+}
+.buttonContainer{
+    background-color: rgb(195, 199, 196);
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+#backgroundPrompt{
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.507);
+    position: absolute;
 }
