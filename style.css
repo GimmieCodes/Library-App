@@ -15,7 +15,7 @@ body{
 .header{
     text-align: start;
     font-size: 148px;
-    padding: 50px;
+    padding: 100px;
     border-style:none ;
     border-top: none;
     border-left: none;
@@ -115,12 +115,13 @@ form{
     display: flex;
     flex-direction: column;
     background-color: rgb(226, 229, 229);
-    height:30%;
+    height:min-content;
     width: 10%;
     padding: 30px;
     border-radius: 4%;
     text-align: center;
     justify-content: space-evenly;
+    overflow: hidden;
 }
 .inputError{
     border-color: red;
