@@ -75,6 +75,7 @@ document.querySelector(".submitBtn").addEventListener("click",function(event){
     readCheck()
     addBookToLibrary(title.value,author.value,pages.value,read)
     document.getElementById('bookPrompt').style.display='none';
+    document.getElementById('backgroundPrompt').style.display='none'
     clearPrompt()
     title.classList.remove("inputError")
     author.classList.remove("inputError")
