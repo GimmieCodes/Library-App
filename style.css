@@ -115,6 +115,10 @@ form{
     display: flex;
     align-self: start;
     size: 10px;
+    background-color: rgb(204, 204, 204);
+    border-style: solid;
+    border-radius: 5px;
+    padding: 7px 10px 7px 10px;
 }
 .formTitle{
     text-align: center;
@@ -127,6 +131,12 @@ form{
     display: flex;
     justify-content: center;
     width: 100%;
+    background-color:rgb(221, 221, 221) ;
+    border-style: solid;
+    border-radius: 5px;
+}
+.submitBtn:hover{
+    background-color: rgb(187, 212, 182);
 }
 .main{
     display: flex;
